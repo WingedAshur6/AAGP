@@ -57,6 +57,18 @@ def testFunctions(fName):
             xg[:,g] = xg[:,g] * (bhi - blo) + blo
             h += 1
         return(xg)
+    
+    def f1_cosine(xIn, bounds):
+
+        x = convertBounds(xIn,bounds)
+        y1= 0
+        y2= 0
+        for i in range(x.shape[1]):
+            xi = x[:,i]
+            y1 = y1 + np.cos(5.0*np.pi*xi)
+            y2 = y2 - np.square(xi)
+        y = 10 * (0.1 * y1 + y2)
+        return y
 
     def f5_qing(xIn,bounds):
         x = convertBounds(xIn,bounds)
@@ -64,6 +76,23 @@ def testFunctions(fName):
         for i in range(x.shape[1]):
             xi = x[:,i]
             y = y + np.square(np.square(xi)-(i+1))
+        return y
+    
+    def f12_mishraBird(x, bounds): ## mishra's bird
+        x = convertBounds(x, bounds)
+        y = 0
+
+        for i in range(x.shape[1]-1):
+            j = i+1
+
+            xi = x[:,i]
+            xj = x[:,j]
+
+            y1 = np.multiply(np.sin(xi), np.exp(np.square(1-np.cos(xj))))
+            y2 = np.multiply(np.cos(xj), np.exp(np.square(1-np.sin(xi))))
+            y3 = np.square(xi-xj)
+
+            y  = y + y1 + y2 + y3
         return y
 
 
@@ -74,6 +103,8 @@ def testFunctions(fName):
 
     funcBounds = {
             5: [f5_qing, [-2,2]],
+            12: [f12_mishraBird, [-2*np.pi,2*np.pi]],
+            1: [f1_cosine, [-1,1]],
             }
     
     func, bounds = funcBounds[f]
@@ -91,7 +122,13 @@ def get_case_study_name(fName, addDim = 0):
     f      = fSplit[0]+'.'+fSplit[1]
 
     fz = {
+         'z.1': 'Cosine',
+         }
+    fz = {
          'z.5': 'Qing',
+         }
+    fz = {
+         'z.12': 'Bird',
          }
 
     addDim = addDim * ((not 'c' in fName) or 'eyelink' in fz[f])

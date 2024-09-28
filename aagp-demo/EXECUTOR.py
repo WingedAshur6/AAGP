@@ -25,7 +25,8 @@ models_2 = [g for g in SETTINGS.models if not g in models_1]
 print('Group 1 models ---> ', models_1)
 print('Group 2 models ---> ', models_2)
 tstart = defTime()
-
+replicates = SETTINGS.replicates*0+3
+n_jobs = SETTINGS.n_jobs*0-2
 # [3] - run group 1 in parallel
 # ==============================================
 DF_1 = pd.DataFrame()
@@ -39,9 +40,9 @@ if True:
                 n_find          = SETTINGS.n_find,
 
 
-                replicates      = SETTINGS.replicates,
+                replicates      = replicates,
                 parallel        = SETTINGS.parallel,
-                nJobs           = SETTINGS.n_jobs,
+                nJobs           = n_jobs,
                 )
 tend1 = defTime()
 tend = tend1-tstart
@@ -49,30 +50,28 @@ print('Group 1 completed. Time   : %0.2fs (%0.2fmins, %0.2fhrs)'%(tend,tend/60,t
 
 # [4] - run group 2 in series (memory issue)
 # ==============================================
-DF_2,XA,YA = run_doe(
-                models          = models_2,
-                test_function   = SETTINGS.test_function,
-                inits           = SETTINGS.inits,
-                pops            = SETTINGS.pops,
-                noise           = SETTINGS.noise,
-                n_find          = SETTINGS.n_find,
+if True:
+    DF_2,XA,YA = run_doe(
+                    models          = models_2,
+                    test_function   = SETTINGS.test_function,
+                    inits           = SETTINGS.inits,
+                    pops            = SETTINGS.pops,
+                    noise           = SETTINGS.noise,
+                    n_find          = SETTINGS.n_find,
 
-
-                replicates      = SETTINGS.replicates,
-                # parallel        = False,
-                # nJobs           = 1,
-                # parallel        = False,
-                # nJobs           = 1,
-                parallel        = SETTINGS.parallel,
-                nJobs           = SETTINGS.n_jobs,
-                )
+                    replicates      = replicates,
+                    parallel        = SETTINGS.parallel,
+                    nJobs           = n_jobs,
+                    )
+    DF = pd.concat((DF_1,DF_2),axis=0,ignore_index=True)
+else:
+    DF = DF_1.copy()
 tend2 = defTime()
 tend = tend2-tend1
 tender = tend2 - tstart
 print('Group 2 completed. Time   : %0.2fs (%0.2fmins, %0.2fhrs)'%(tend,tend/60,tend/3600))
 print('All groups completed. Time: %0.2fs (%0.2fmins, %0.2fhrs)'%(tender,tender/60,tender/3600))
 
-DF = pd.concat((DF_1,DF_2),axis=0,ignore_index=True)
 DF['Model'] = DF['Model'].replace(to_replace=SETTINGS.renames)
 agg = DF.groupby(['Model','Samples Added']).agg({'NRMSE':'mean'}).reset_index()
 fig = plt.figure(figsize=(8,5),dpi=350)
