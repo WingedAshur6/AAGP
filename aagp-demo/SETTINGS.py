@@ -47,7 +47,7 @@ def install_packages():
 
 
 
-deepGP_maxIters = 200
+deepGP_maxIters = 2000
 inits           = [4,8,10]
 pops            = [200,350,500]
 n_find          = 30
