@@ -1,5 +1,5 @@
 # An Adjacency-Adaptive Gaussian Process Method for Sample Efficient Response Surface Modeling and Test-Point Acquisition
-Stanford Martinez and Adel Alaeddini
+By Stanford Martinez and Adel Alaeddini
 
 
 ## Intro
