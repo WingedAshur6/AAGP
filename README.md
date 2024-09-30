@@ -31,7 +31,8 @@ This repository contains the code for running two examples of simulations as see
 ## Simulation Runtime Notes
 - Once started after step `(8)` above, the code will then proceed to install packages and run the simulation.
 - At the end, it will output "Example Output.jpg" to the directory in which "EXECUTOR.py" is placed.
-- Runtime is roughly ~90min on an intel 13900HX processor with 28 cores running in parallel for the `Qing (3D)` example, and ~360min for the `Cosine (3D)` Example.
+- The DeepGP methodolgy is very memory-intensive and may cause OOM errors running in parallel.
+- Runtime is roughly ~90min on an intel 13900HX processor with 28 cores and 96GB RAM running in parallel for the `Qing (3D)` example, and ~360min for the `Cosine (3D)` Example.
 - This difference in compute time is primarily attributed to the DeepGP competitor, the layers and dimensions used for its configuration, the dimensionality of the dataset, and the required 2,000 training iterations (as is used by the model in our manuscript) for DeepGP's parameter optimization routine.
 - The `Qing (3D)` Example takes a shorter amount of time due to similar results as seen in the manuscript being achievable with using only 200 training iterations instead of 2,000.
 
