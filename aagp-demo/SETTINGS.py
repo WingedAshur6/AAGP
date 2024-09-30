@@ -2,6 +2,8 @@
 import subprocess
 import sys
 import os
+import EXAMPLE_FUNCTION
+
 # if True:
 def install_packages():
     def install(package):
@@ -46,13 +48,12 @@ def install_packages():
     print()
 
 
-
-deepGP_maxIters = 2000
+test_function   = 'z.5.3' if EXAMPLE_FUNCTION.test_function == 0 else 'z.1.10'
+deepGP_maxIters = 2000 if not test_function == 'z.5.3' else 200
 inits           = [4,8,10]
 pops            = [200,350,500]
 n_find          = 30
 noise           = 1 # percent value, do not convert to decimal.
-test_function   = 'z.1.10'
 parallel        = True
 n_jobs          = int(min(os.cpu_count()-4, 32))
 if n_jobs <=0:

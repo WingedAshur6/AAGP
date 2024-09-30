@@ -20,6 +20,8 @@ current_directory = os.path.dirname(os.path.abspath(__file__))
 # ==============================================
 print()
 print('Running simulation in directory ---->', current_directory)
+test_function = 'Qing (3D)' if 'z.5' in SETTINGS.test_function.lower() else 'Cosine (10D)'
+print('Test Function  ---> ',test_function)
 models_1 = [g for g in SETTINGS.models if not 'deepgp' in g.lower()]
 models_2 = [g for g in SETTINGS.models if not g in models_1]
 print('Group 1 models ---> ', models_1)
@@ -34,9 +36,9 @@ simulation_parameters = dict(
                 pops            = SETTINGS.pops,
                 noise           = SETTINGS.noise,
                 n_find          = SETTINGS.n_find,
-                replicates      = SETTINGS.replicates*0+1,
+                replicates      = SETTINGS.replicates,
                 parallel        = SETTINGS.parallel,
-                nJobs           = SETTINGS.n_jobs*0-2,
+                nJobs           = SETTINGS.n_jobs,
 )
 
 # [4] - run group 1 in parallel
@@ -78,7 +80,7 @@ sns.lineplot(
     palette = SETTINGS.model_palette,
     linewidth=2
 )
-ax.set_title('Qing (3D)')
+ax.set_title(test_function)
 ax.legend(loc='upper right', bbox_to_anchor=(1.5,1), frameon=True, shadow=True)
 plt.tight_layout()
 plt.savefig(current_directory + '/Example Output.jpg',dpi=350)
