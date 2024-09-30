@@ -14,12 +14,12 @@ This repository contains the code for running two examples of simulations as see
 
 ### Installation and Running
 1) Download this branch (`aagp-demo`) as a zip file
-2) Extract all contents into some folder `example: C:\Users\your user name\downloads\aaggp_demo`
+2) Extract all contents into some folder `example: C:\Users\your user name\downloads\aagp_demo`
 3) install anaconda and run the `anaconda PowerShell prompt` application, then enter the following commands:
 4) `conda create --name aagp_demo python=3.9 -y`
 5) `conda install -y git`
 6) `conda activate aagp_demo`
-7) `cd "C:\Users\your user name\downloads\aaggp_demo"`
+7) `cd "C:\Users\your user name\downloads\aagp_demo"`
 8) `python EXECUTOR.py`
 
 ### Changing the Example to Test
