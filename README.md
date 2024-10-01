@@ -7,7 +7,7 @@ This repository contains the code for running two examples of simulations as see
 
 ## Recommended Installation
 ### NOTE
-- This is our prescribed method of running this code. We recommend installing a separate version of python (versions 3.7-3.9) to use for this example to prevent overwriting any packages currently installed on existing versions of python you may have.
+- This is our prescribed method of running this code. We recommend installing a separate version of python `(versions 3.7-3.9) on Windows` to use for this example to prevent overwriting any packages currently installed on existing versions of python you may have.
 - We have tested on python versions 3.7-3.12 and have found that 3.7-3.9 are compatible with the Deep Gaussian Process model used as a comparison framework (Github: https://github.com/SheffieldML/PyDeepGP)
   - The DeepGP package implemented therein utilizes earlier versions than 3.7 and leverages the `GPy` package, but we have found that the two are both compatible with up to 3.9 before C++ compiler issues arise.
   - For specifics on python versions referenced by the authors of the DeepGP package, please see line 37 here (other specifics are available in this file): https://github.com/SheffieldML/PyDeepGP/blob/master/setup.py#L37
