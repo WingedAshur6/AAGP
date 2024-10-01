@@ -3,7 +3,7 @@ By Stanford Martinez and Adel Alaeddini
 
 
 ## Intro
-This repository contains the code for running two examples of simulations as seen in the manuscript (titled above). The specific examples are for the `(1) Qing (3D)` and `(2) Cosine (10D)` functions in figure 3.
+This repository contains the code for running two examples of simulations as seen in the manuscript (titled above). The specific examples are for the `(1) Qing (3D)` and `(2) Cosine (10D)` functions in figure 3 therein.
 
 ## Recommended Installation
 ### NOTE
