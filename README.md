@@ -12,7 +12,7 @@ This repository contains the code for running two examples of simulations as see
   - The DeepGP package implemented therein utilizes earlier versions than 3.7 and leverages the `GPy` package, but we have found that the two are both compatible with up to 3.9 before C++ compiler issues arise.
   - For specifics on python versions referenced by the authors of the DeepGP package, please see line 37 here (other specifics are available in this file): https://github.com/SheffieldML/PyDeepGP/blob/master/setup.py#L37
 
-### Installation and Running
+### Setup and Running
 1) Download this branch (`main`) as a zip file
 2) Extract all contents into some folder `example: C:\Users\your user name\downloads\aagp_demo`
 3) install anaconda and run the `anaconda PowerShell prompt` application, then enter the following commands:
