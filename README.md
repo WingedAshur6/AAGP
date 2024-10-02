@@ -3,10 +3,11 @@ By Stanford Martinez and Adel Alaeddini
 
 
 ## Intro
-This repository contains the code for running two examples of simulations as seen in the manuscript (titled above). The specific examples are for the `(1) Qing (3D)` and `(2) Cosine (10D)` functions in figure 3 therein.
+This repository contains the code for running two examples of simulations as seen in the manuscript (titled above). The specific examples are for the `(1) Qing (3D)` and `(2) Cosine (10D)` functions in Figure 3 therein.
 
 ## Recommended Installation
 ### NOTE
+- The steps below are listed to allow users to configure an environment similar to the one used by the authors of this manuscript to produce examples of output as seen in Figure 3 in the manuscript.
 - This is our prescribed method of running this code (tested on `Windows`). We recommend installing a separate version of python (versions 3.7-3.9) to use for this example to prevent overwriting any packages currently installed on existing versions of python you may have.
 - We have tested on python versions 3.7-3.12 and have found that 3.7-3.9 are compatible with the Deep Gaussian Process model used as a comparison framework (Github: https://github.com/SheffieldML/PyDeepGP)
   - The DeepGP package implemented therein utilizes earlier versions than 3.7 and leverages the `GPy` package, but we have found that the two are both compatible with up to 3.9 before C++ compiler issues arise.
@@ -32,7 +33,7 @@ This repository contains the code for running two examples of simulations as see
 - Once started after step `(8)` above, the code will then proceed to install packages and run the simulation.
 - At the end, it will output `Example Output.jpg` to the directory in which `EXECUTOR.py` is placed.
 - The DeepGP methodolgy is very memory-intensive and may cause OOM errors running in parallel.
-- Runtime is roughly ~90min on an intel 13900HX processor with 28 cores and 96GB RAM running in parallel for the `Qing (3D)` example, and ~360min for the `Cosine (10D)` Example.
+- Runtime is roughly ~100min on an intel 13900HX processor with 28 cores and 96GB RAM running in parallel for the `Qing (3D)` example, and ~360min for the `Cosine (10D)` Example.
 - This large difference in compute time reported for the `Cosine (10D)` function is primarily attributed to the DeepGP competitor, the layers and dimensions used for its configuration, the dimensionality of the dataset, and 2,000 iterations (as is used by the model in our manuscript) for DeepGP's training.
 - The `Qing (3D)` Example takes a shorter amount of time due to similar results as seen in the manuscript being achievable with using only 200 training iterations instead of 2,000.
 
