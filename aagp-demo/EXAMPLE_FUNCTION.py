@@ -1,1 +1,1 @@
-test_function = 1
+test_function = 0
