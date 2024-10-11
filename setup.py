@@ -22,7 +22,7 @@ setup(name = 'AAGP',
       install_requires=[
           'matplotlib>=3.5.3','pandas>=1.3.5','scipy>=1.7.3','xgboost>=1.6.2',
           'scipy>=1.14.1','scikit-learn>=1.0.2','joblib==1.2.0','numpy>=1.21.6','tqdm==4.65.0','seaborn==0.12.2',
-          'git+https://github.com/SheffieldML/pyDeepGP'
+          'deepgp@https://github.com/SheffieldML/pyDeepGP'
       ],
       include_dirs=[numpy.get_include()],
       classifiers=['License :: OSI Approved :: BSD License',
