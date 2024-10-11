@@ -3,7 +3,6 @@
 
 import os
 from setuptools import setup, find_packages
-import numpy
 
 # Version number
 version = '1.0'
