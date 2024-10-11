@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os
-from setuptools import setup, packages
+from setuptools import setup, find_packages
 import numpy
 
 # Version number
@@ -19,7 +19,7 @@ setup(name = 'AAGP',
       keywords = "gaussian process",
       url = "",
       long_description=read('README.md'),
-      packages = packages.find_packages(),
+      packages = find_packages(),
       install_requires=[
           'matplotlib>=3.5.3','pandas>=1.3.5','scipy>=1.7.3','xgboost>=1.6.2',
           'scikit-learn>=1.0.2','joblib==1.2.0','numpy>=1.21.6','tqdm==4.65.0','seaborn==0.12.2',
