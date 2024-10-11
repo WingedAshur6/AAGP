@@ -2,7 +2,7 @@
 import subprocess
 import sys
 import os
-import EXAMPLE_FUNCTION
+import AAGP.EXAMPLE_FUNCTION as EXAMPLE_FUNCTION
 
 # if True:
 def install_packages():

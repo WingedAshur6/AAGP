@@ -2,7 +2,7 @@
 # [1] - import the required packages
 # =============================================
 import os
-import SETTINGS
+import AAGP.SETTINGS as SETTINGS
 SETTINGS.install_packages()
 
 import numpy as np
@@ -11,8 +11,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from timeit import default_timer as defTime
 
-from visualization import SETSTYLE
-from simulation import run_doe
+from AAGP.visualization import SETSTYLE
+from AAGP.simulation import run_doe
 SETSTYLE('bmh', clear=True)
 current_directory = os.path.dirname(os.path.abspath(__file__))
 

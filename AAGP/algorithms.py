@@ -6,7 +6,7 @@ from sklearn.metrics.pairwise import euclidean_distances as ED, manhattan_distan
 
 # [1] - Developed packages
 # ==========================================
-from auxiliaries import(
+from AAGP.auxiliaries import(
     VS
 )
 

@@ -10,7 +10,7 @@ import numpy as np
 
 # [2] - self-made packages
 # =================================
-from algorithms import lhs_sampling
+from AAGP.algorithms import lhs_sampling
 
 cutta = lambda lo, hi, dims: [[lo for g in range(dims)], [hi for g in range(dims)]]
 

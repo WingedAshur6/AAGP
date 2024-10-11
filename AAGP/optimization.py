@@ -15,9 +15,9 @@ rs = RandomState(MT19937(SeedSequence(777)))
 
 # [2] - self-made imports
 # =========================================
-from algorithms import lhs_sampling, FFD
+from AAGP.algorithms import lhs_sampling, FFD
 
-from auxiliaries import VS#,CS,VSS,CSS
+from AAGP.auxiliaries import VS#,CS,VSS,CSS
 
 # [3] - introduce auxiliary codes
 # ================================

@@ -8,14 +8,14 @@ import GPy, deepgp
 
 
 # from sklearn.metrics.pairwise import euclidean_distances, manhattan_distances
-from algorithms import euclidean_distances#, manhattan_distances
+from AAGP.algorithms import euclidean_distances#, manhattan_distances
 import sys,os
 # from sklearn.preprocessing import StandardScaler, MinMaxScaler
 
 # [2] - self-made packages
 # ============================================
-from algorithms import get_kernel_data_bounds as CKDG
-from auxiliaries import grabBrackets
+from AAGP.algorithms import get_kernel_data_bounds as CKDG
+from AAGP.auxiliaries import grabBrackets
 
 class multiGP:
 
