@@ -9,12 +9,12 @@ import warnings
 
 # [2] - self-made package import
 # ==================================================
-from AAGP.equations import get_function as get_function
-from AAGP.modeling import(
+from equations import get_function
+from modeling import(
     model_master,
     calculate_regression_metrics
 )
-from AAGP.auxiliaries import ProgressParallel
+from auxiliaries import ProgressParallel
 
 
 # [3] - functions

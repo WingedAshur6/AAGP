@@ -9,17 +9,17 @@ import matplotlib.pyplot as plt
 
 # [2] - self-made package import
 # ===============================
-from AAGP.algorithms import(
+from algorithms import(
     euclidean_distances,
     get_kernel_data_bounds as CKDG,
     myKernel,
 )
 
-from AAGP.optimization import(
+from optimization import(
     class_execute_optimizer as CEO
 )
 
-from AAGP.visualization import(
+from visualization import(
     dawn_cmap
 )
 

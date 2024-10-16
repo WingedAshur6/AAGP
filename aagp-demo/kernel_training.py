@@ -5,7 +5,7 @@ import numpy as np
 
 # [1] - self-made package imports
 # =====================================
-from AAGP.algorithms import (
+from algorithms import (
     CL,
     GET_LAPLACIAN_BOUNDS,
     get_kernel_data_bounds,
@@ -17,15 +17,15 @@ from AAGP.algorithms import (
     # trainTest_binSplitter,
 )
 
-from AAGP.aagp import(
+from aagp import(
     AdjacencyVectorizer
 )
 
-from AAGP.auxiliaries import (
+from auxiliaries import (
     VS
 )
 
-from AAGP.optimization import(
+from optimization import(
     class_execute_optimizer as CEO,
     # SPOPT_EXE
 )

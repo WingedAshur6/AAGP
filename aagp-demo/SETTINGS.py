@@ -2,7 +2,7 @@
 import subprocess
 import sys
 import os
-import AAGP.EXAMPLE_FUNCTION as EXAMPLE_FUNCTION
+import EXAMPLE_FUNCTION
 
 # if True:
 def install_packages():
@@ -20,18 +20,18 @@ def install_packages():
                 subprocess.check_call([sys.executable, "-m", "pip", "install",'--use-pep517', package])
 
     packages = [
-        # 'matplotlib==3.7.1',
-        # 'seaborn==0.12.2',
-        # 'tqdm==4.65.0',
-        # 'scipy==1.8.0', # 1.7.3 for python 3.7.16
-        # 'scikit-learn==1.0.2',
-        # 'xgboost==1.7.5', # 1.6.2 for python 3.7.16
-        # 'GPy==1.10.0',
+        'matplotlib==3.7.1',
+        'seaborn==0.12.2',
+        'tqdm==4.65.0',
+        'scipy==1.8.0', # 1.7.3 for python 3.7.16
+        'scikit-learn==1.0.2',
+        'xgboost==1.7.5', # 1.6.2 for python 3.7.16
+        'GPy==1.10.0',
         'git+https://github.com/SheffieldML/pyDeepGP',
-        # 'numpy==1.21.6',
-        # 'pandas==2.0.1',
-        # 'joblib==1.2.0',
-        # 'ipykernel',
+        'numpy==1.21.6',
+        'pandas==2.0.1',
+        'joblib==1.2.0',
+        'ipykernel',
     ]
     print()
     print('================================================================')

@@ -10,8 +10,8 @@ from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error, f
 
 # [2] - self-made packages
 # ============================
-from AAGP.kernel_training import kernelModel
-from AAGP.algorithms import (
+from kernel_training import kernelModel
+from algorithms import (
     CL,
     euclidean_distances,
     # trainTest_binSplitter,
@@ -26,16 +26,16 @@ from AAGP.algorithms import (
     maxiMin_acquisition
 )
 
-from AAGP.deepGP import (
+from deepGP import (
     multiGP
 )
 
-from AAGP.optimization import (
+from optimization import (
     class_execute_optimizer as CEO,
     SPOPT_EXE
 )
 
-from AAGP.SETTINGS import (
+from SETTINGS import (
     deepGP_maxIters
 )
 
