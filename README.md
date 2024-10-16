@@ -6,7 +6,7 @@ By Stanford Martinez and Adel Alaeddini
 This repository contains the code for running two examples of simulations as seen in the manuscript (titled above). The specific examples are for the `(1) Qing (3D)` and `(2) Cosine (10D)` functions in Figure 3 therein.
 
 ## Recommended Installation
-### NOTE
+### Notes
 - The steps below are listed to allow users to configure an environment similar to the one used by the authors of this manuscript to produce examples of output as seen in Figure 3 in the manuscript.
 - This is our prescribed method of running this code (tested on `Windows`). We recommend installing a separate version of python (versions 3.7-3.9) to use for this example to prevent overwriting any packages currently installed on existing versions of python you may have.
 - We have tested on python versions 3.7-3.12 and have found that 3.7-3.9 are compatible with the Deep Gaussian Process model used as a comparison framework (Github: https://github.com/SheffieldML/PyDeepGP)
@@ -16,6 +16,9 @@ This repository contains the code for running two examples of simulations as see
 ### Setup and Running
 1) Download this branch (`main`) as a zip file
 2) Extract all contents into some folder `example: C:\Users\your user name\downloads\aagp_demo`
+----
+- If you already have a dedicated environment (with `git` installed), please activate the environment and skip to step `(7)`. Please see the `Notes` section for more information on versioning and compatibility.
+----
 3) install anaconda and run the `anaconda PowerShell prompt` application, then enter the following commands:
 4) `conda create --name aagp_demo python=3.9 -y`
 5) `conda install -y git`
