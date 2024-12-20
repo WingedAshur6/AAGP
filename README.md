@@ -21,7 +21,7 @@ This repository contains the code for running two examples of simulations as see
 ----
 3) install anaconda and run the `anaconda PowerShell prompt` application, then enter the following commands:
 4) `conda create --name aagp_demo python=3.9 -y`
-5) `conda install -y git`
+5) `conda install -y git` (we utilize anaconda due to streamline installing git here)
 6) `conda activate aagp_demo`
 7) `cd "C:\Users\your user name\downloads\aagp_demo"`
 8) `python EXECUTOR.py`
